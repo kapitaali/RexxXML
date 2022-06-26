@@ -7,7 +7,7 @@ The RexxXML library provides a Rexx interface to data represented using HTML or 
 RexxXML is written by Patrick TJ McPhee (ptjm@interlog.com). It is offered here for better availability. 
 Originally from http://home.interlog.com/~ptjm/
 
-( Please read the file (rexxxml.pdf)[rexxxml.pdf] for a complete documentation. It serves as an excellent brief introduction into the Rexx language. )
+( Please read the file [rexxxml.pdf](rexxxml.pdf) for a complete documentation. It serves as an excellent brief introduction into the Rexx language. )
 
 ## Introduction
 
