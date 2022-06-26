@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!-- schema validation test. This is fine. -->
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' version="1.0">
+  <xs:element name='data'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name='name' type='xs:string'/>
+	<xs:element name='poodle' maxOccurs='unbounded'>
+          <xs:simpleType>
+            <xs:union>
+              <xs:simpleType>
+	        <xs:restriction base="xs:integer"/>
+              </xs:simpleType>
+              <xs:simpleType>
+		<xs:restriction base="xs:string">
+		  <xs:length value="0"/>
+		</xs:restriction>
+              </xs:simpleType>
+            </xs:union>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

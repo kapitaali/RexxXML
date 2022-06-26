@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<!-- schema validation test. This is good data. To be great data, it would
+     need something extra, but as it stands, it's good -->
+<data xmlns:xsi='http://www.w3.org/2001/XMLSchema-Instance'>
+  <name>Patrick TJ McPhee</name>
+  <poodle>17</poodle>
+  <poodle>87</poodle>
+  <poodle xsi:nil='true'/>
+</data>

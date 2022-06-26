@@ -1,0 +1,72 @@
+# NT/MSVC make file for RexxXML
+
+#  The contents of this file are subject to the Mozilla Public License
+#  Version 1.1 (the "License"); you may not use this file except in
+#  compliance with the License. You may obtain a copy of the License at
+#  http://www.mozilla.org/MPL/
+
+#  Software distributed under the License is distributed on an "AS IS"
+#  basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+#  License for the specific language governing rights and limitations
+#  under the License.
+
+#  The Original Code is RexxXML.
+
+#  The Initial Developer of the Original Code is Patrick TJ McPhee.
+#  Portions created by Patrick McPhee are Copyright © 2003
+#  Patrick TJ McPhee. All Rights Reserved.
+
+#  Contributors:
+
+# $Header: C:/ptjm/rexx/rexxxml/RCS/Makefile.nt 1.5 2003/10/27 17:50:12 ptjm Rel $
+
+DEBUG=-Zi
+POPT=-Ox -G6
+so=dll
+o=obj
+PCFLAGS=-MD
+PLDFLAGS=-LD
+PCDEFS=-DLIBXML_THREAD_ENABLED
+POBJ=
+DEF=rexxxml.def
+CC=cl
+MAKEF=Makefile.nt
+PCLEAN=rexxxml.exp rexxxml.lib *.ilk *.pdb
+
+# path to rexxsaa.h
+REXX_INCLUDE=-I/ptjm/rexx/regina
+REXX_LIB=c:\ptjm\rexx\regina\regina.lib
+
+# path to libxml/, libxslt/, libexslt, and iconv.h
+# I move the contents of the include directory from the distribution to
+#  c:/ptjm/dev/xml/include
+# and the contents of the lib directory to
+#  c:/ptjm/dev/xml/lib
+#
+# because I use an old MSVC and the library format has changed (!), I
+# build special libs in my rexxxml directory. You should probably use the
+# ones from the distribution...
+XML_INCLUDE=-I/ptjm/dev/xml/include
+XML_LIBDIR=
+PLIBS=libxml2.lib libxslt.lib libexslt.lib
+
+CFLAGS=$(DEBUG) $(OPT) $(PCFLAGS) $(PCDEFS) $(REXX_INCLUDE) $(XML_INCLUDE)
+LDFLAGS=$(PLDFLAGS)
+LIBS=$(XML_LIBDIR) $(PLIBS) $(REXX_LIB)
+so=dll
+
+OBJ=rexxxml.$o xmldoc.$o xpath.$o xmlnodes.$o xslt.$o schema.$o fetch.$o $(POBJ)
+
+
+all : rexxxml.$(so)
+
+dist :
+	$(MAKE) -f $(MAKEF) OPT="$(POPT)" DEBUG=""
+
+
+
+rexxxml.$(so) : $(OBJ)
+	$(CC) $(CFLAGS) -o rexxxml.$(so) $(OBJ) $(DEF) $(LDFLAGS) $(LIBS)
+
+clean :
+	-del $(OBJ) rexxxml.$(so) $(PCLEAN)

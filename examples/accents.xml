@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+
+<!-- example of XML file with accented data -->
+
+<data>
+I like éclairs.
+I sometimes eat them in my hôtel.
+Unless I'm at the Holiday Inn in Kingston, in which case,
+I get some strüdel.
+</data>

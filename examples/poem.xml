@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- A dreary poem -->
+<poem><stanza><line>Winter has come early.</line>
+         <line>The frost has iced over the empty fields</line>
+         <line>and ruined the late corn.</line>
+         <line>It will be a cold November.</line>
+ </stanza>	 
+ <stanza><line>Once I wondered why the world was so cruel</line>
+         <line>but I have given up wondering,</line>
+         <line>for who can say how the North wind blows?</line>
+ </stanza></poem>

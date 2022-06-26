@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!-- schema validation test. this is not a well-formed document -->
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' version="1.0">
+    <xs:complexType>
+  <xs:element name='data'>
+      <xs:sequence>
+        <xs:element name='name' type='xs:string'/>
+	<xs:element name='poodle' maxOccurs='unbounded' type='integer'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="forward">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:IDREF">
+        <xs:attribute name="wing" default="centre">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="left"/>
+              <xs:enumeration value="right"/>
+              <xs:enumeration value="centre"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="player">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute type="xs:ID" name="playerid"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="line">
+    <xs:complexType>
+     <xs:sequence>
+     <xs:element maxOccurs="3" ref="forward"/>
+     </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="team">
+    <xs:complexType>
+    <xs:choice maxOccurs="unbounded">
+      <xs:element ref="line"/>
+      <xs:element ref="player"/>
+    </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

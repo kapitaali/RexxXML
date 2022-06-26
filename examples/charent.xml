@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE doc [
+  <!ELEMENT doc (p+)>
+  <!ELEMENT p (#PCDATA)>
+  <!ENTITY Eac "&#xc9;">
+]>
+
+<doc>
+<p>Éclairs are for kids.</p>
+<p>&#xc9;clairs are for kids.</p>
+<p>&Eac;clairs are for kids.</p>
+</doc>

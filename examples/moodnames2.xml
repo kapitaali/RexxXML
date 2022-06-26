@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<people>
+  <happy-person name="sally"/>
+  <happy-person name="jenny"/>
+  <happy-person name="donna"/>
+  <unhappy-person name="jean"/>
+  <happy-person name="fred"/>
+  <unhappy-person name="bob"/>
+  <happy-person name="arthur"/>
+</people>

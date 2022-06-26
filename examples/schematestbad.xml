@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<!-- schema validation test. The second `poodle' should be an integer
+     but has a > in it -->
+<data>
+  <name>Patrick TJ McPhee</name>
+  <poodle>17</poodle>
+  <poodle>87></poodle>
+</data>

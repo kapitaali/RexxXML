@@ -1,0 +1,60 @@
+Some hopefully useful examples. Ultimately, I'd like to have some
+truly useful examples.
+
+README			this file
+accents.xml		an xml file with accented data
+addentity.rex		hack to add an entity definition to a tree
+addentity2.rex		second hack to define an entity
+antirep.rex		tree building with node replacement 
+antirexx.rex		tree building with node addition
+anystyle.rex		script which applies a stylesheet (arg 1) to an
+			 XML file (arg 2)
+baddoc.xml		badly-formed document
+charent.xml		accented data through entities
+compiletest1.rex	test of speed difference between compiled and
+compiletest2.rex	 uncompiled XPath expressions. Included as examples
+			 of using XPath evaluation
+			 these require libxml2-api.xml from xmlsoft.org
+denombre.xml		xml file used by sc2.rex
+disclaimer.xml		xml file used with disclaimer.xsl
+disclaimer.xsl		taking data from a stylesheet example
+dumpfile.rex		the famous dumpfile example
+dumphtml.rex		the nearly as famous dumphtml example
+filelist*		example of document()
+flake.xsl		applying flakey commentary to poetry
+infrastructure.html	highlighting data in an HTML file
+infrastructure.rex
+iscurrent.rex		the iscurrent example, as discussed in the manual
+listform.rex		two approaches to listing html forms
+listform2.rex
+lls.rex			external function which runs `ls'
+mixedtest2.xml		demonstration of xs:simpleContent
+mixedtest2.xsd
+moodlist.xml		lists of names, used in some examples
+moodnames.xml
+moodnames2.xml
+multidoc.rex		context-setting example
+names.xml		more names
+needrice.xml		part of entity-adding hack example
+poem.xml		a poem written specifically for this project
+poement.xml		transformed version of the poem, used by some example
+randomly.xsl		example of Rexx function used as an XSLT predicate
+			 can be run against any XML file
+sc2.rex			example of XPath environment
+sc4.rex			example of XML and XPath environments
+schematest*		collection of files to test schema validation
+traverse.rex		tree traversal examples. these are discussed 
+traversea.rex		 in the manual
+treewalk.rex		external function which prints the structure of
+			 a document to a tree
+twofuncs.xsl		Not that this was a problem, but test of defining
+			 more than one rexx function in a single stylesheet
+xml08.rex		xmlFindNode test
+xml09.rex		xmlNodeSetItem test
+xml10.rex		XPath and name-space test
+xslt17.rex		example of passing parameter values to stylesheet
+xslt17.xsl
+xslt18.xsl		example of external program used in xslt function
+			 call. Can be run against any XML file
+trip/yahoo*		the yahoo search example, as discussed in the
+			 manual

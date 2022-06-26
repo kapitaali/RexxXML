@@ -1,0 +1,11 @@
+<team>
+
+<line><forward wing="left">McPhee</forward>
+      <forward>Yin</forward>
+      <forward wing="right">Sandy</forward>
+</line>
+
+<player playerid="McPhee"><name>Patrick McPhee</name></player>
+<player playerid="Yin"><name>Austin Yin</name></player>
+<player playerid="Sandy"><name>Sandy McClintock</name></player>
+</team>

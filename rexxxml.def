@@ -1,0 +1,7 @@
+LIBRARY rexxxml
+
+EXPORTS
+	xmlloadfuncs
+	xmlversion
+	rexxXMLInit
+	rexxXMLFini

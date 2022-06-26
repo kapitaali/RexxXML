@@ -1,0 +1,8 @@
+<doc>
+  <p>Here is a bit of p</p>
+  <filelist>
+     <file>filelist2.xml</file>
+     <file>filelist3.xml</file>
+  </filelist>
+  <p>Here is more p</p>
+</doc>

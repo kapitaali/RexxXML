@@ -1,0 +1,39 @@
+# AIX make file for RexxXML
+
+#  The contents of this file are subject to the Mozilla Public License
+#  Version 1.1 (the "License"); you may not use this file except in
+#  compliance with the License. You may obtain a copy of the License at
+#  http://www.mozilla.org/MPL/
+
+#  Software distributed under the License is distributed on an "AS IS"
+#  basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+#  License for the specific language governing rights and limitations
+#  under the License.
+
+#  The Original Code is RexxXML.
+
+#  The Initial Developer of the Original Code is Patrick TJ McPhee.
+#  Portions created by Patrick McPhee are Copyright © 2003
+#  Patrick TJ McPhee. All Rights Reserved.
+
+#  Contributors:
+
+# $Header: C:/ptjm/rexx/rexxxml/RCS/Makefile.aix 1.1 2003/10/31 17:06:37 ptjm Rel $
+
+# flags for IBM's C compiler
+POPT=-O
+PCDEFS=
+PCFLAGS=-fPIC -qro -qroconst
+PLDFLAGS=-bnoentry -bE:librexxxml.exp -bM:SRE -T512 -H512 -lc -L$(HOME)/regina
+PLIBS=-lregina
+PCLEAN=librexxxml.a librexxxml.exp
+
+librexxxml.a : librexxxml.exp librexxxml.so
+	ln -f librexxxml.so librexxxml.a
+
+librexxxml.exp : rexxxml.def
+	awk '/xmlloadfuncs/,0 { print $$1 }' rexxxml.def > librexxxml.exp 
+
+include Makefile.inc
+
+dist : make -f Makefile.aix DEBUG='' OPT="$(POPT)"

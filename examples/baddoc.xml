@@ -1,0 +1,3 @@
+<mydoc>
+ <here>is something<wrong>due to improper nesting</here> which is </wrong>
+</mydoc>
