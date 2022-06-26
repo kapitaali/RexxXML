@@ -39,10 +39,10 @@ To install the pre-compiled library, copy the appropriate version of rexxxml.dll
 
 The distribution does not include a configuration script, but it includes make files which have been known to work using the stock vendor compiler on several Unix systems. If you have one of those systems, link the appropriate make file to the name ‘Makefile’ and build the ‘dist’ target. For instance, on Solaris:
 
-'''
+```
 ln Makefile.sun Makefile
 make dist
-'''
+```
 
 On most platforms, this builds a shared library called librexxutil.so. On HP-UX, the file is called librexxutil.sl, and on AIX, it’s called librexxutil.a. The path to this library can be set in three ways: Most Unix systems allow a shared library search path to be embedded into program files. If you build Regina (or your Rexx-enabled application) such that this path is set to include a directory such as /opt/regina/lib or /usr/local/lib, you can install RexxXML by copying the shared library to this directory (see section 1.1.4 for more information). If this is not possible, you need to either set an environment variable or change the way the system searches for shared libraries.
 
